@@ -1,7 +1,7 @@
 import java.io.IOException;
 public class caracterEn {
 
-    public static void main(String[] args) {
+    public static void caracterEntrada(String[] args) {
         if (args[0] == null) {
             System.exit(1);
         }
@@ -12,9 +12,12 @@ public class caracterEn {
                 System.out.println("Texto: " + cadena);
                 System.out.println("Caracter en la posición " + car + ": " + cadena.charAt(car));
             }
-         catch (ArrayIndexOutOfBoundsException e){
-             System.out.println(e.getMessage());
+         catch (StringIndexOutOfBoundsException e){
+             System.out.println(e.getMessage() + "Has intentado recuperar una posición de la " +
+                     "cadena de caracteres que no existe");
              System.exit(2);
         }
+            
+            
     }
 }
